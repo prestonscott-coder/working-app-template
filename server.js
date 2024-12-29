@@ -50,7 +50,7 @@ app.use(
     resave: false,
     saveUninitialized: false,
     store: new MongoStore({ 
-      mongoUrl: 'mongodb+srv://prestonscott:bBall4ps1@recipe-app.tpfmy.mongodb.net/?retryWrites=true&w=majority&appName=recipe-app',
+      mongoUrl: process.env.DB_STRING,
       collection: 'sessions'
     }),
   })
